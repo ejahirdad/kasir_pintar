@@ -23,12 +23,12 @@ class BarangDataTable extends DataTable
         return datatables($query)
         ->eloquent($this->query())
 
-            ->addColumn('show', function(){
-                return 'show';
-            })
+            // ->addColumn('show', function(){
+            //     return 'show';
+            // })
 
             
-            ->rawColumns(['show']);
+            ->rawColumns(['']);
 
     }
 

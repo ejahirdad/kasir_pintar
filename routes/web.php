@@ -22,6 +22,6 @@ Route::get('/getDataBarang/{id}', 'HomeController@getDataBarang')->name('getdata
 Route::resource('options', 'HomeController');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/update/{id_barang}', 'HomeController@update')->name('update');
+Route::post('/update', 'HomeController@update')->name('update');
 
 

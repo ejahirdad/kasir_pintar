@@ -23,10 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(BarangDataTable $dataTable)
+    public function index()
     {
         $data_barang = tBarang::all();
-        // dd($data_barang);
         // return $dataTable->render('home', compact('data_barang'));
         return view('home', compact('data_barang'));
     }
@@ -51,9 +50,8 @@ class HomeController extends Controller
         return json_encode($data_barang);
     }
 
-    public function update(Request $request, $id_barang){
-        // dd($request);
-        $barang_edit = tBarang::where('id', $id_barang)->first();
+    public function update(Request $request){
+        $barang_edit = tBarang::where('id', $request->id_barang)->first();
         $barang_edit->kode_barang = $request->kode_barang;
         $barang_edit->nama_barang = $request->nama_barang;
         $barang_edit->stok = $request->stok;

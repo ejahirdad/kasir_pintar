@@ -7,7 +7,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            {!! Form::model($data_barang, array('route'=>['update', $barang->id],'data-parsley-validate'=>'', 'id'=>'form_update')) !!}
+            {!! Form::open(array('route'=>['update'],'data-parsley-validate'=>'', 'id'=>'form_update')) !!}
            
             {{-- {{csrf_field()}} --}}
                 <div class="modal-body">

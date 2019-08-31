@@ -179,8 +179,6 @@ return [
 
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
 
-        Yajra\DataTables\DataTablesServiceProvider::class,
-        Yajra\DataTables\HtmlServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
     ],
@@ -233,7 +231,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Laratrust'   => Laratrust\LaratrustFacade::class,
-        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
     ],
 
